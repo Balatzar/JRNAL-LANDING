@@ -1,0 +1,23 @@
+// Variables
+
+// Gray and Brand Colors for use across theme
+
+$theme-primary:    #E84855;
+$theme-secondary:  #E84855;
+$theme-tertiary:   #14213D;
+
+$theme-primary-opacity:    rgba(232,72,85,.9);
+$theme-secondary-opacity:  rgba(232,72,85,.9);
+$theme-tertiary-opacity:   rgba(20,33,61,.9);
+
+$gray-base:        #14213D;
+$gray-darker:      lighten($gray-base, 13.5%); // #222
+$gray-dark:        lighten($gray-base, 20%);   // #333
+$gray:             lighten($gray-base, 33.5%); // #555
+$gray-light:       lighten($gray-base, 46.7%); // #777
+$gray-lighter:     lighten($gray-base, 93.5%); // #eee
+
+$brand-twitter:   #1da1f2;
+$brand-medium:		#02B875;
+$brand-facebook:	#3b5998;
+$brand-google-plus:	#dd4b39;

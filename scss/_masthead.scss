@@ -1,0 +1,98 @@
+// Styling for the masthead
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   background-color: $theme-tertiary;
+   z-index: 9999;
+   text-align: center;
+}
+
+#loading-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+}
+
+#loading form{
+    position: absolute;
+    bottom:40px;
+    z-index: 999;
+}
+header.masthead {
+    position: relative;
+
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    color: white;
+    background: $theme-secondary;
+    background: -webkit-linear-gradient(to left, $theme-secondary-opacity, $theme-tertiary-opacity);
+    background:  linear-gradient(to left, $theme-secondary-opacity, $theme-tertiary-opacity);
+    .header-content {
+        max-width: 500px;
+        margin-bottom: 100px;
+
+        text-align: center;
+        h1 {
+            font-size: 30px;
+        }
+    }
+    .device-container {
+        max-width: 325px;
+        margin-right: auto;
+        margin-left: auto;
+        .screen img {
+            border-radius: 3px;
+        }
+    }
+    @media (min-width: 992px) {
+        height: 100vh;
+        min-height: 775px;
+        padding-top: 0;
+        padding-bottom: 0;
+        .header-content {
+            margin-bottom: 0;
+
+            text-align: left;
+            h1 {
+                font-size: 50px;
+            }
+        }
+        .device-container {
+            max-width: 325px;
+        }
+    }
+    /* fluid 5 columns */
+    .grid{
+        position:fixed!important;
+        z-index: -1;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        background:$theme-tertiary;
+    }
+    .grid-sizer,
+    .grid-item { width: 16.666667%;}
+    .grid-item{
+        padding:10px;
+    }
+    /* 2 columns */
+    .grid-item--width2 { width: 40%; }
+    .grid-item img{
+        width: 100%;
+        height: auto;
+        border-radius:10px;
+    }
+    @media screen and (max-width: 768px) {
+      /* 5 columns for larger screens */
+      .grid-item,.grid-sizer { width: 33.33%; }
+    }
+}
