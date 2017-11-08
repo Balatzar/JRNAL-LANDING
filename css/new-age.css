@@ -223,6 +223,14 @@ section.download {
 section#features {
   background: rgba(255, 255, 255, 0.9);
   text-align: center; }
+  section#features i {
+    font-size: 80px;
+    display: block;
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(to left, #E84855, #14213D);
+    background: linear-gradient(to left, #E84855, #14213D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 section.philosophy {
   background: url("../img/morning.jpg");
