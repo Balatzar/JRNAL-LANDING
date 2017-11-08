@@ -2,13 +2,13 @@
   (function($) {
   "use strict"; // Start of use strict
 
-  // var password = "getjrnal"
-  // var passwordin = window.prompt("Enter password","password");
-  // if(passwordin == password){
-  //   $('#loading').hide();
-  // }else{
-  //   alert("Password do not match.");
-  // }
+  var password = "getjrnal"
+  var passwordin = window.prompt("Enter password","password");
+  if(passwordin == password){
+    $('#loading').hide();
+  }else{
+    alert("Password do not match.");
+  }
 
 
 
