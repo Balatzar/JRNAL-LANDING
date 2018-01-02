@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine on
+# index.php to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3, 9}\ /.*index\.php\ HTTP/
+RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
