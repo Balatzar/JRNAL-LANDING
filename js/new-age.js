@@ -2,17 +2,10 @@
   (function($) {
   "use strict"; // Start of use strict
 
-  // var password = "getjrnal"
-  // var passwordin = window.prompt("Enter password","password");
-  // if(passwordin == password){
-  //   $('#loading').hide();
-  // }else{
-  //   alert("Password do not match.");
-  // }
-
   $(window).ready(function(){
     $('#loading').fadeOut();
   });
+  console.log("Coucou toi, si tu vois ça envoie un mail à parlotte@jrnal.co, on cherche des gens curieux pour taffer avec nous");
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
