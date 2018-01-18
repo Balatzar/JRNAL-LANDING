@@ -9,6 +9,7 @@ body {
   height: 100%; }
 
 body {
+  overflow-x: hidden;
   font-family: 'Antic Slab', 'Helvetica', 'Arial', 'sans-serif'; }
 
 a {

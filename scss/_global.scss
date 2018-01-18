@@ -6,6 +6,7 @@ body {
 }
 
 body {
+    overflow-x: hidden;
     @include body-font;
 }
 
