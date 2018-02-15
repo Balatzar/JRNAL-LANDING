@@ -24,7 +24,7 @@
   }
   max-height:80vh;
   overflow:hidden;
-  @media screen and ($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     /* 5 columns for larger screens */
     .grid-item,.grid-sizer { width: 33.33%; }
     .grid-item--width3{ width: 100%;}

@@ -3,7 +3,7 @@
   top:0;
   left:0;
   right:0;
-  z-index:99;
+  z-index:999999;
   padding:10px;
   background:#fff;
   img{
@@ -40,7 +40,7 @@
   }
 }
 
-@media screen and ($breakpoint) {
+@media screen and (max-width: $breakpoint) {
   .menu-left{
     span, a{
       display:none;

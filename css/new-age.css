@@ -59,7 +59,7 @@ button {
   button:hover {
     cursor: pointer; }
 
-@media screen and (960px) {
+@media screen and (max-width: 960px) {
   body {
     padding-top: 30px !important; } }
 
@@ -68,7 +68,7 @@ button {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
+  z-index: 999999;
   padding: 10px;
   background: #fff; }
   .header img {
@@ -99,7 +99,7 @@ button {
       color: #E84855;
       text-decoration: none; }
 
-@media screen and (960px) {
+@media screen and (max-width: 960px) {
   .menu-left span, .menu-left a {
     display: none; } }
 
@@ -128,7 +128,7 @@ button {
     text-align: center;
     color: #fff;
     padding: 1em; }
-  @media screen and (960px) {
+  @media screen and (max-width: 960px) {
     .partners {
       /* 5 columns for larger screens */
       max-height: none;
@@ -345,7 +345,9 @@ button {
 
 .appview {
   position: relative;
-  background-color: #E84855; }
+  background-color: #E84855;
+  min-height: 100vh;
+  overflow: hidden; }
   .appview h1 {
     padding-bottom: 0; }
   .appview .changeview {
@@ -371,9 +373,9 @@ button {
     position: absolute;
     background: #fff;
     height: 600px;
-    width: 300px;
+    width: 350px;
     margin: 100px auto 100px auto;
-    border-radius: 40px; }
+    border-radius: 40px 40px 0 0; }
   .appview .iphone-body:before {
     content: "";
     display: block;
@@ -402,8 +404,8 @@ button {
     position: relative;
     top: 70px;
     background: #fff;
-    height: 440px;
-    width: 272px;
+    height: 500px;
+    width: 322px;
     margin: 0 auto;
     border: 2px solid #e7ebec;
     border-radius: 4px;
@@ -452,7 +454,22 @@ button {
   .appview .mobile.active {
     opacity: 1;
     z-index: 999; }
+  .appview .app-store-button {
+    display: inline-block;
+    padding: 0 10px;
+    width: 50%;
+    max-width: 190px; }
+  .appview .google-play-button {
+    display: inline-block;
+    padding: 0 10px;
+    width: 50%;
+    max-width: 190px; }
+  .appview .badge-container {
+    margin: 0 -10px; }
   @media screen and (max-width: 960px) {
+    .appview .appview {
+      min-height: auto;
+      padding-bottom: 80px; }
     .appview .appview .container {
       display: none; }
     .appview .appview .container.responsive {

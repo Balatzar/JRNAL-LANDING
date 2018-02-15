@@ -61,7 +61,7 @@ background:transparent;
     cursor:pointer;
 }
 } 
-@media screen and ($breakpoint) {
+@media screen and (max-width: $breakpoint) {
     body{
         padding-top:30px!important;
     }
