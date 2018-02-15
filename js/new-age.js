@@ -1,50 +1,43 @@
 
   (function($) {
   "use strict"; // Start of use strict
-
-  $(window).ready(function(){
-    $('#loading').fadeOut();
-  });
-  console.log("Coucou toi, si tu vois ça envoie un mail à parlotte@jrnal.co, on cherche des gens curieux pour taffer avec nous");
-
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 48)
-        }, 1000, "easeInOutExpo");
-        return false;
+  //smooth scroll
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+        && 
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
       }
-    }
-  });
-
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 54
-  });
-
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-
+    });
 
   // init Masonry
   var $grid = $('.grid').masonry({
@@ -55,63 +48,31 @@
     $grid.masonry('layout');
   });
 
+  //SLIDER
 
-    //Text animate
+  $('.slider').slick({
+    autoplay: true,
+  });
 
-    var TxtRotate = function(el, toRotate, period) {
-      this.toRotate = toRotate;
-      this.el = el;
-      this.loopNum = 0;
-      this.period = parseInt(period, 10) || 2000;
-      this.txt = '';
-      this.tick();
-      this.isDeleting = false;
-    };
+  //APP VIEW
+  $('.appview .changeview button').click(function(){
+    var target = $(this).attr("data-target");
 
-    TxtRotate.prototype.tick = function() {
-      var i = this.loopNum % this.toRotate.length;
-      var fullTxt = this.toRotate[i];
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+    $('.'+target).addClass('active');
+  });
 
-      if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-      } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-      }
+  if ($(window).width() < 960) {
+    console.log('petit');
+    $('.hidesmall').hide();
+    $('.showsmall').show();
+  }
+  else {
+    console.log('grand');
+    $('.hidesmall').show();
+    $('.showsmall').hide();
+  }
 
-      this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-      var that = this;
-      var delta = 300 - Math.random() * 100;
-
-      if (this.isDeleting) { delta /= 2; }
-
-      if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-      } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-      }
-
-      setTimeout(function() {
-        that.tick();
-      }, delta);
-    };
-
-    window.onload = function() {
-      var elements = document.getElementsByClassName('txt-rotate');
-      for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-rotate');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtRotate(elements[i], JSON.parse(toRotate), period);
-        }
-      }
-      // INJECT CSS
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-      document.body.appendChild(css);
-    };
 })(jQuery); // End of use strict

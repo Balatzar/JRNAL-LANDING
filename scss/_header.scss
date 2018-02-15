@@ -1,0 +1,50 @@
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:99;
+  padding:10px;
+  background:#fff;
+  img{
+    height:35px;
+    margin-right:10px;
+  }
+  span{
+    margin-right:10px;
+  }
+  button{
+    font-size:17px;
+  }
+  .menu-left{
+    float:left;
+  }
+  .subscribe{
+    float:right;
+    background:$theme-primary;
+    color:#fff;
+    padding:5px 20px;
+    border:none;
+    border-radius:20px;
+  }
+  a{
+    color:$theme-tertiary;
+    margin-right:10px;
+    @include heading-font;
+    text-transform: uppercase;
+    font-size:14px;
+    &:hover{
+      color:$theme-primary;
+      text-decoration:none;
+    }
+  }
+}
+
+@media screen and ($breakpoint) {
+  .menu-left{
+    span, a{
+      display:none;
+    }
+  }
+
+}

@@ -1,0 +1,59 @@
+.cbp-so-section{
+  background-color:#fff;
+  height:100vh;
+  display:flex;
+  article, figure{
+      width:50%;
+      float:left;
+      position:relative;
+      img, h2{
+        position: absolute;
+        left:0;
+        right:0;
+        top:50%;
+        transform:translateY(-50%);
+      }
+  }
+  article > *{
+    padding:60px;
+  }
+  img{
+    max-width: 100%;
+  }
+  .cbp-so-side-left{
+    text-align:right;
+  }
+  position: -webkit-sticky;  // required for Safari
+  position: sticky;
+  top: 0; // required as well.
+}
+.sticky{
+  position: -webkit-sticky;  // required for Safari
+  position: sticky;
+  top: 0; // required as well.
+}
+
+@media screen and ($breakpoint) {
+  .cbp-so-section{
+    background-color: #fff;
+    flex-direction: column;
+    clear: both;
+    justify-content: space-evenly;
+
+    article, figure{
+      width:100%;
+      h2{
+        font-size:30px;
+        text-align:center;
+      }
+      img, h2{
+        position: unset;
+        top:0;
+        transform:translateY(0);
+      }
+      & > * {
+        padding: 10px;
+      }
+    }
+  }
+}
