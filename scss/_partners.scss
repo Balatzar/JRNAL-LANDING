@@ -6,7 +6,7 @@
   }
   .grid-sizer,
   .grid-item { width: 12.5%;}
-  .grid-item--width3{ width: 37.5%;}
+  .grid-item--width4{ width: 50%;}
   .grid-item{
       padding:10px;
   }
@@ -27,7 +27,7 @@
   @media screen and (max-width: $breakpoint) {
     /* 5 columns for larger screens */
     .grid-item,.grid-sizer { width: 33.33%; }
-    .grid-item--width3{ width: 100%;}
+    .grid-item--width4{ width: 100%;}
     max-height:none;
     overflow:auto;
   }

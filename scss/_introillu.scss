@@ -2,6 +2,9 @@
   background-color:#fff;
   height:100vh;
   display:flex;
+  position: -webkit-sticky;  // required for Safari
+  position: sticky;
+  top: 0; // required as well.
   article, figure{
       width:50%;
       float:left;
@@ -14,6 +17,36 @@
         transform:translateY(-50%);
       }
   }
+  &.small{
+    height:auto;
+    padding:40px 0;
+    figure{
+      width:40%;
+    }
+    figure img{
+      max-width:90%;
+    }
+    article{
+      width:60%;
+      h2{
+        padding-left:0;
+      }
+      & p{
+        padding:0;
+      }
+    }
+
+    article{
+      h2{
+        position:relative;
+        left:0;
+        right:0;
+        top:0;
+        transform:translateY(0);
+
+      }
+    }
+  }
   article > *{
     padding:60px;
   }
@@ -23,9 +56,6 @@
   .cbp-so-side-left{
     text-align:right;
   }
-  position: -webkit-sticky;  // required for Safari
-  position: sticky;
-  top: 0; // required as well.
 }
 .sticky{
   position: -webkit-sticky;  // required for Safari
@@ -33,14 +63,14 @@
   top: 0; // required as well.
 }
 
-@media screen and ($breakpoint) {
+@media screen and (max-width: $breakpoint) {
   .cbp-so-section{
     background-color: #fff;
     flex-direction: column;
     clear: both;
     justify-content: space-evenly;
-
-    article, figure{
+    position:relative;
+    &.small article, &.small figure, article, figure{
       width:100%;
       h2{
         font-size:30px;

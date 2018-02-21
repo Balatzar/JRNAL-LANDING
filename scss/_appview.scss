@@ -33,10 +33,10 @@
   .iphone-body {
     position: absolute;
     background: #fff;
-    height: 600px;
+    height: 655px;
     width: 350px;
     margin: 100px auto 100px auto;
-    border-radius: 40px 40px 0 0;
+    border-radius: 40px;
   }
 
   .iphone-body:before {
@@ -155,15 +155,16 @@
       margin: 0 -10px;
   }
   @media screen and (max-width: $breakpoint) {
-    .appview{
       min-height:auto;
       padding-bottom:80px;
-    }
     .appview .container{
         display:none;
     }
     .appview .container.responsive{
         display:block;
+    }
+    .app-store-button{
+      margin-bottom:20px;
     }
 }
 }
