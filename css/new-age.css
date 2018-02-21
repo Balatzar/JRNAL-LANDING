@@ -31,15 +31,15 @@ hr.light {
   border-color: white; }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: 'Josefin Sans', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
   color: #14213D; }
+
+h3 {
+  font-family: 'Antic Slab', 'Helvetica', 'Arial', 'sans-serif';
+  color: #E84855; }
 
 p {
   font-size: 18px;
@@ -322,8 +322,10 @@ button {
       max-width: 90%; }
     .cbp-so-section.small article {
       width: 60%; }
-      .cbp-so-section.small article h2 {
+      .cbp-so-section.small article h2, .cbp-so-section.small article h3 {
         padding-left: 0; }
+      .cbp-so-section.small article h3 {
+        padding: 0; }
       .cbp-so-section.small article p {
         padding: 0; }
     .cbp-so-section.small article h2 {

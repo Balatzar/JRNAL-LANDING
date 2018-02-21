@@ -31,13 +31,14 @@ hr.light {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2{
     @include heading-font;
     color: $theme-tertiary;
+}
+
+h3{
+    @include body-font;
+    color:$theme-primary;
 }
 
 p {
