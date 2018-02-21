@@ -4,7 +4,7 @@
   left:0;
   right:0;
   z-index:999999;
-  padding:10px;
+  padding:10px 10px 0 10px;
   background:#fff;
   img{
     height:35px;
@@ -38,6 +38,14 @@
       text-decoration:none;
     }
   }
+  .list-social{
+    float:  right;
+    padding-top: 7px;
+    margin-right:10px;
+  }
+  .list-inline-item a i{
+    font-size:20px;
+  } 
 }
 
 @media screen and (max-width: $breakpoint) {
