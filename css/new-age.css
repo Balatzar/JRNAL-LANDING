@@ -571,6 +571,35 @@ button {
           .join .left:hover .ico img, .join .right:hover .ico img {
             height: 200px; } }
 
+.bg-primary {
+  background: #E84855; }
+
+.appview.pro {
+  min-height: auto;
+  position: relative; }
+  .appview.pro .item {
+    position: relative; }
+  .appview.pro .left, .appview.pro .right {
+    padding: 40px; }
+  .appview.pro .left {
+    width: 40%;
+    float: left; }
+    .appview.pro .left img {
+      width: 100%; }
+  .appview.pro .right {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding-left: 40%; }
+    .appview.pro .right .text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .appview.pro .right .text p {
+        color: #14213D; }
+
 /* Slider */
 .slick-slider {
   position: relative;
