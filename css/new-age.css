@@ -600,6 +600,14 @@ button {
       .appview.pro .right .text p {
         color: #14213D; }
 
+.contact {
+  padding: 60px 0; }
+  .contact h2 {
+    padding-left: 180px; }
+  .contact .contact-small img {
+    max-width: 130px;
+    float: left; }
+
 /* Slider */
 .slick-slider {
   position: relative;
