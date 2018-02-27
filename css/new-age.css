@@ -573,6 +573,11 @@ button {
           .join .left:hover .ico img, .join .right:hover .ico img {
             height: 200px; } }
 
+.header.pro {
+  background-color: #14213D; }
+  .header.pro a {
+    color: #fff; }
+
 .show {
   display: inline-block !important; }
 
