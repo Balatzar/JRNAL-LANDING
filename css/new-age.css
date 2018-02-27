@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
  */
 @charset "UTF-8";
+@import url("https://afeld.github.io/emoji-css/emoji.css");
 html,
 body {
   width: 100%;
@@ -44,7 +45,8 @@ h3 {
 p {
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #14213D; }
 
 h1 {
   text-align: center;
@@ -571,12 +573,13 @@ button {
           .join .left:hover .ico img, .join .right:hover .ico img {
             height: 200px; } }
 
-.bg-primary {
-  background: #E84855; }
+.show {
+  display: inline-block !important; }
 
 .appview.pro {
   min-height: auto;
-  position: relative; }
+  position: relative;
+  background-color: #fff; }
   .appview.pro .item {
     position: relative; }
   .appview.pro .left, .appview.pro .right {
@@ -601,12 +604,91 @@ button {
         color: #14213D; }
 
 .contact {
-  padding: 60px 0; }
+  padding: 60px 0;
+  background-color: #E84855; }
   .contact h2 {
     padding-left: 180px; }
+    .contact h2 a {
+      color: #fff; }
   .contact .contact-small img {
     max-width: 130px;
     float: left; }
+
+.stackcards {
+  width: 100%;
+  margin: 0; }
+  .stackcards .container {
+    margin: 4em auto; }
+  .stackcards .inner-container {
+    position: relative;
+    max-width: 30%;
+    min-width: 500px;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto 100px; }
+  .stackcards .content {
+    position: absolute;
+    opacity: 0;
+    top: 2em;
+    left: 10%;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 0; }
+  .stackcards .active {
+    display: block !important;
+    margin: 0 auto;
+    opacity: 1;
+    transition: ease-in-out 1s; }
+  .stackcards .card {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    padding: 2em 0;
+    height: 60vh;
+    box-sizing: border-box;
+    transition: .3s ease;
+    box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.35); }
+    .stackcards .card:first-child, .stackcards .card:nth-child(2) {
+      background: #111d35;
+      height: 8px;
+      border-radius: 5px 5px 0 0;
+      padding: 0;
+      box-shadow: none; }
+    .stackcards .card:first-child {
+      margin: 0 20px;
+      background: #0c1526; }
+    .stackcards .card:nth-child(2) {
+      margin: 0 10px; }
+    .stackcards .card .progress-container {
+      background: rgba(232, 72, 85, 0.2);
+      height: 6px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 0 0 5px 5px; }
+      .stackcards .card .progress-container .step {
+        background-color: #E84855;
+        height: 6px;
+        width: 33%;
+        border-radius: 0 0 0 5px; }
+  .stackcards h1 {
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0; }
+  .stackcards h2 {
+    text-align: center; }
+  .stackcards p {
+    margin-top: 0;
+    text-align: center; }
+  .stackcards img {
+    height: 100px; }
+  .stackcards button {
+    color: #14213D;
+    text-decoration: none;
+    position: absolute;
+    bottom: 60px;
+    right: 20px; }
 
 /* Slider */
 .slick-slider {

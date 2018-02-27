@@ -1,9 +1,10 @@
-.bg-primary{
-  background:$theme-primary;
+.show{
+  display:inline-block!important;
 }
 .appview.pro{
     min-height:auto;
     position:relative;
+    background-color:#fff;
     .item{
       position:relative;
     }
@@ -34,8 +35,12 @@
 }
 .contact{
   padding:60px 0;
+  background-color:$theme-primary;
   h2{
     padding-left:180px;
+    a{
+      color:#fff;
+    }
   }
   .contact-small{
     img{
@@ -43,5 +48,111 @@
       float:left;
     }
 
+  }
+}
+
+// cards
+@import url('https://afeld.github.io/emoji-css/emoji.css');
+
+.stackcards {
+  width: 100%;
+  margin: 0;
+  .container {
+    margin: 4em auto;
+  }
+
+  .inner-container {
+    position: relative;
+    max-width: 30%;
+    min-width: 500px;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto 100px;
+  }
+
+  .content {
+    position: absolute;
+    opacity: 0;
+    top: 2em;
+    left: 10%;
+    width: 80%;
+    margin: 0 auto;
+    bottom:0;
+  }
+
+  .active {
+    display: block !important;
+    margin: 0 auto;
+    opacity: 1;
+    transition: ease-in-out 1s;
+  }
+
+  .card {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    padding: 2em 0;
+    height: 60vh;
+    box-sizing: border-box;
+    transition: .3s ease;
+    box-shadow: 0 3px 10px -2px rgba(0,0,0,0.35);
+
+    &:first-child,
+    &:nth-child(2) {
+      background: darken($theme-tertiary, 2%);
+      height: 8px;
+      border-radius: 5px 5px 0 0;
+      padding: 0;
+      box-shadow: none;
+    }
+  
+    &:first-child {
+      margin: 0 20px;
+      background: darken($theme-tertiary, 6%);
+    }
+  
+    &:nth-child(2) {
+      margin: 0 10px;
+    }
+  
+    .progress-container {
+      background: rgba($theme-primary, 0.2);
+      height: 6px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 0 0 5px 5px;
+    
+      .step {
+        background-color: $theme-primary;
+        height: 6px;
+        width: 33%;
+        border-radius: 0 0 0 5px;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom:60px;
+    padding:0;
+  }
+  h2{
+    text-align:center;
+  }
+  p {
+    margin-top: 0;
+    text-align:center;
+  }
+  img{
+    height:100px;
+  }
+  button {
+    color: $theme-tertiary;
+    text-decoration: none;
+    position: absolute;
+    bottom:60px;
+    right:20px;
   }
 }
