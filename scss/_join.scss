@@ -19,7 +19,7 @@
       height:100%;
       position:absolute;
       top:0;
-      opacity:.2;
+      opacity:.1;
       transition:all .2s;
     }
     img{
@@ -32,8 +32,9 @@
     }
     &:hover{
       text-decoration:none;
+      background-color:$theme-primary;
       .ico{
-        opacity:.5;
+        opacity:.2;
         img{
           height:150px;
         }
@@ -41,7 +42,7 @@
     }
   }
   .left{
-    background-color:$theme-primary;
+    background-color:$theme-tertiary;
     padding-right:80px;
     h2{
       text-align:right;
@@ -55,6 +56,12 @@
     padding-left:80px;
     .ico{
       right:30%;
+    }
+  }
+  .right.center{
+    h2{text-align:center;}
+    .ico{
+      right:50%;
     }
   }
   @media screen and (max-width: $breakpoint) {
