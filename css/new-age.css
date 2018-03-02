@@ -4,7 +4,6 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
  */
 @charset "UTF-8";
-@import url("https://afeld.github.io/emoji-css/emoji.css");
 html,
 body {
   width: 100%;
@@ -590,6 +589,8 @@ button {
   min-height: auto;
   position: relative;
   background-color: #fff; }
+  .appview.pro .container {
+    padding-top: 60px; }
   .appview.pro .item {
     position: relative; }
   .appview.pro .left, .appview.pro .right {
@@ -612,6 +613,8 @@ button {
       transform: translateY(-50%); }
       .appview.pro .right .text p {
         color: #14213D; }
+  .appview.pro .slick-next::before, .appview.pro .slick-prev::before {
+    color: #E84855; }
 
 .contact {
   padding: 60px 0;
@@ -700,6 +703,21 @@ button {
     position: absolute;
     bottom: 20px;
     right: 0; }
+
+@media screen and (max-width: 960px) {
+  .appview.pro .left, .appview.pro .right {
+    width: 100%;
+    float: none; }
+  .appview.pro .right {
+    padding-left: 20%; }
+  .appview.pro .left {
+    opacity: .2; }
+  .contact .contact-small {
+    text-align: center; }
+    .contact .contact-small img {
+      float: none; }
+    .contact .contact-small h2 {
+      padding: 20px; } }
 
 /* Slider */
 .slick-slider {

@@ -11,6 +11,9 @@
     min-height:auto;
     position:relative;
     background-color:#fff;
+    .container{
+      padding-top: 60px;
+    }
     .item{
       position:relative;
     }
@@ -38,6 +41,9 @@
       }
     }
   }
+  .slick-next::before, .slick-prev::before{
+    color:$theme-primary;
+  }
 }
 .contact{
   padding:60px 0;
@@ -58,8 +64,6 @@
 }
 
 // cards
-@import url('https://afeld.github.io/emoji-css/emoji.css');
-
 .stackcards {
   width: 100%;
   margin: 0;
@@ -161,5 +165,25 @@
     position: absolute;
     bottom:20px;
     right:0;
+  }
+}
+
+@media screen and (max-width: $breakpoint) {
+  .appview.pro{
+    .left,.right{
+      width:100%;
+      float:none;
+    }
+    .right{
+      padding-left:20%;
+    }
+    .left{
+      opacity:.2;
+    }
+  }
+  .contact .contact-small{
+    text-align:center;
+    img{float:none;}
+    h2{padding:20px;}
   }
 }
